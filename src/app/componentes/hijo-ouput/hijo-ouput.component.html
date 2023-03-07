@@ -1,1 +1,16 @@
-<p>hijo-ouput works!</p>
+<div class="container">
+  <div class="row mt-5">
+    <div class="col">
+      <label for=""><h1>Componente hijo</h1></label>
+      <div class="input-group">
+        <input  #valor class="form-control" type="text" name="" id="" placeholder="Ingresar color desde el Componente hijo">
+        <button
+          class="btn btn-success"
+          (click)="enviarColor(valor.value)"
+          type="button"
+          >Enviar color
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

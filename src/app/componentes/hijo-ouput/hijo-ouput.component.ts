@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-hijo-ouput',
@@ -7,8 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HijoOuputComponent implements OnInit {
 
-  constructor() { }
+  @Output() eventoEnviarColor = new EventEmitter<string>()
 
+  enviarColor(valor:string){
+    this.eventoEnviarColor.emit(valor)
+  }
+
+  constructor() { }
   ngOnInit(): void {
   }
 

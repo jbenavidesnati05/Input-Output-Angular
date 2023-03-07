@@ -7,8 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PadreOuputComponent implements OnInit {
 
-  constructor() { }
+  colores = ["azul", "rojo","amarillo"]
 
+  agregarColor(color:string){
+    if(color == "")
+    alert("ingresar un color")
+    else{
+      this.colores.push(color)
+    }
+  }
+
+  constructor() { }
   ngOnInit(): void {
   }
 
