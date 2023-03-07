@@ -10,8 +10,10 @@
           <h1>Componente padre</h1>
         </div>
         <div class="card-body">
-          <ul class="list-group" *ngFor="let color of colores">
-            <li class="list-group-item m-1">{{color}}</li>
+          <ul class="list-group" *ngFor="let color of colores; let i = index">
+            <li class="list-group-item m-1">{{color}}
+              <button class="btn btn-danger" (click)="eliminarColor(i)" >Eliminar</button>
+            </li>
           </ul>
         </div>
       </div>
